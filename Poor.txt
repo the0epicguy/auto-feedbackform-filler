@@ -1,0 +1,1 @@
+javascript:(function(){var sel=document.querySelectorAll('select'); var filled=0; sel.forEach(function(s){ for(var i=0;i<s.options.length;i++){ if(s.options[i].value==='Poor'||s.options[i].text==='Poor'){ s.selectedIndex=i; s.dispatchEvent(new Event('change',{bubbles:true})); filled++; break; } } }); alert('Done! Filled '+filled+' dropdowns with Poor.');})();
